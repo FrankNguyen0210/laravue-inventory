@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        // Lấy tất cả sản phẩm và trả về định dạng JSON
+        $products = Product::all();
+        return response()->json($products);
     }
 
     /**
